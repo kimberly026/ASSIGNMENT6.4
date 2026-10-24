@@ -1,0 +1,223 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #1e293b;
+    background-color: #f1f5f9;
+}
+
+.hero {
+    padding: 45px 20px;
+    text-align: center;
+    color: white;
+    background: linear-gradient(135deg, #1d4ed8, #0f766e);
+}
+
+.hero h1 {
+    margin-top: 0;
+    font-size: 2.2rem;
+}
+
+.hero-button,
+.card-button {
+    display: inline-block;
+    padding: 10px 18px;
+    color: white;
+    background-color: #2563eb;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.hero-button {
+    background-color: #0f172a;
+}
+
+/* Sticky navigation */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    padding: 14px;
+    background-color: #0f172a;
+}
+
+.navbar a {
+    padding: 8px 14px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.navbar a:hover {
+    background-color: #2563eb;
+}
+
+/* Main content */
+.container {
+    width: 92%;
+    max-width: 1000px;
+    margin: 25px auto;
+}
+
+.section {
+    margin-bottom: 24px;
+    padding: 25px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 8%);
+}
+
+.section h2 {
+    margin-top: 0;
+    color: #1d4ed8;
+}
+
+/* Relative parent for the absolute badge */
+.card {
+    position: relative;
+    max-width: 450px;
+    margin: 35px auto 20px;
+    padding: 35px 22px 22px;
+
+    background-color: #eff6ff;
+    border: 2px solid #93c5fd;
+    border-radius: 10px;
+}
+
+.card h3 {
+    color: #1e40af;
+}
+
+/* Absolute badge positioned relative to .card */
+.badge {
+    position: absolute;
+    top: -14px;
+    right: 16px;
+    z-index: 2;
+
+    padding: 5px 12px;
+    color: white;
+    background-color: #dc2626;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.note {
+    text-align: center;
+    color: #475569;
+}
+
+/* Demonstrate overlapping elements and z-index */
+.stack-demo {
+    position: relative;
+    min-height: 150px;
+    margin-top: 20px;
+}
+
+.layer {
+    position: absolute;
+    width: 220px;
+    padding: 18px 12px;
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.layer-one {
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+    background-color: #2563eb;
+}
+
+.layer-two {
+    top: 55px;
+    left: 100px;
+    z-index: 2;
+    background-color: #0f766e;
+}
+
+/* Fixed floating help button */
+.floating-help {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    z-index: 200;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 62px;
+    height: 62px;
+
+    color: white;
+    background-color: #dc2626;
+    border: 3px solid white;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 25%);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.floating-help:hover {
+    background-color: #991b1b;
+}
+
+footer {
+    padding: 20px;
+    color: white;
+    text-align: center;
+    background-color: #0f172a;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 1.7rem;
+    }
+
+    .navbar {
+        gap: 4px;
+    }
+
+    .navbar a {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .section {
+        padding: 18px;
+    }
+
+    .layer {
+        width: 180px;
+        font-size: 13px;
+    }
+
+    .layer-two {
+        left: 65px;
+    }
+
+    .floating-help {
+        right: 14px;
+        bottom: 14px;
+        width: 54px;
+        height: 54px;
+    }
+}
